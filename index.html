@@ -1,0 +1,2820 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="中華職棒六隊巡禮與球團加盟歷史：從職棒元年到六隊新時代。">
+  <title>CPBL｜台灣職業棒球・六隊巡禮</title>
+
+  <!-- Bootstrap 僅作為格線、Navbar、Modal、Carousel 等元件基礎；整體色彩與視覺均由自訂 CSS 控制 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #101820;
+      --ink-2: #17232d;
+      --panel: #1d2b35;
+      --paper: #f3f1e9;
+      --muted: #aab5b9;
+      --line: rgba(255, 255, 255, .13);
+      --gold: #e9b949;
+      --grass: #39765b;
+      --red: #d94a43;
+      --cpbl-blue: #1769aa;
+      --cpbl-red: #d92735;
+      --white: #fff;
+      --brothers: #f2c230;
+      --lions: #f1a51d;
+      --monkeys: #d92735;
+      --guardians: #1764a5;
+      --dragons: #c51f36;
+      /* --hawks: #1e8a72; */
+      --hawks: #074739;
+      --nav-h: 76px;
+      --radius: 22px;
+      --shadow: 0 22px 60px rgba(0, 0, 0, .22);
+
+      /* *** */
+      /* Old team */
+      /* 義大犀牛隊（EDA Rhinos） */
+      --Rhinos: hsla(326, 67%, 46%, 0.301);
+      --Lamigo: hsla(205, 100%, 24%, 0.308);
+      --LaNew: hsla(176, 98%, 20%, 0.301);
+      --AGAN: hsla(188, 52%, 52%, 0.301);
+      --Tiger: hsla(227, 29%, 27%, 0.753);
+      --Whale: hsla(359, 72%, 67%, 0.301);
+      --dragonsOld: hsla(352, 42%, 50%, 0.295);
+      --JUNGO: hsla(131, 63%, 15%, 0.801);
+      --Eagle: hsla(6, 100%, 94%, 0.137);
+      --brothersOld: hsla(47, 99%, 48%, 0.37);
+      --lionsOld: hsla(143, 81%, 29%, 0.315);
+
+      --guardiansLight: hsla(207, 76%, 37%, 0.342);
+      --hawksLight: hsla(167, 82%, 15%, 0.308);
+      --dragonsLight: hsla(352, 73%, 45%, 0.301);
+
+
+    }
+
+    S * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Noto Sans TC", sans-serif;
+      line-height: 1.75
+    }
+
+    a {
+      text-decoration: none
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    .display-font {
+      font-family: "Barlow Condensed", "Noto Sans TC", sans-serif;
+      letter-spacing: .02em
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .2em;
+      text-transform: uppercase
+    }
+
+    .eyebrow:before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: currentColor
+    }
+
+    .section {
+      padding: 104px 0;
+      position: relative;
+      overflow: hidden
+    }
+
+    .section-dark {
+      background: var(--ink);
+      color: #fff
+    }
+
+    .section-deep {
+      background: #0b1218;
+      color: #fff
+    }
+
+    .section-title {
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -.04em;
+      font-size: clamp(2.25rem, 5vw, 4.5rem);
+      margin: 14px 0 18px
+    }
+
+    .section-lead {
+      color: #65727a;
+      max-width: 700px
+    }
+
+    .section-dark .section-lead,
+    .section-deep .section-lead {
+      color: #aab5b9
+    }
+
+    .section-head {
+      margin-bottom: 48px
+    }
+
+    .btn-sport {
+      background: var(--gold);
+      border: 0;
+      color: #111;
+      font-weight: 900;
+      padding: 13px 22px;
+      border-radius: 999px;
+      transition: .25s
+    }
+
+    .btn-sport:hover {
+      background: #ffd46d;
+      color: #111;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px #e9b94940
+    }
+
+    .btn-outline-light {
+      border-radius: 999px;
+      font-weight: 800
+    }
+
+    .topline {
+      height: 5px;
+      background: linear-gradient(90deg, var(--brothers) 0 16.6%, var(--lions) 16.6% 33.2%, var(--monkeys) 33.2% 49.8%, var(--guardians) 49.8% 66.4%, var(--dragons) 66.4% 83%, var(--hawks) 83%)
+    }
+
+    /* 01 social strip */
+    .social-strip {
+      background: #172b3b;
+      color: #f2f5f7;
+      font-size: .78rem;
+      padding: 8px 0
+    }
+
+    .social-strip a {
+      color: #d5dde0;
+      margin-left: 15px;
+      transition: .2s
+    }
+
+    .social-strip a:hover {
+      color: var(--gold)
+    }
+
+    /* 02 navbar */
+    .navbar {
+      min-height: var(--nav-h);
+      background: rgba(31, 55, 73, .96) !important;
+      border-bottom: 1px solid #ffffff24;
+      backdrop-filter: blur(14px)
+    }
+
+    .navbar-brand {
+      font-weight: 900;
+      letter-spacing: .04em;
+      color: #fff !important;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--gold);
+      color: #101820;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem
+    }
+
+    .navbar .nav-link {
+      color: #c5ced1 !important;
+      font-weight: 700;
+      font-size: .9rem;
+      padding: 10px 12px !important
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: var(--gold) !important
+    }
+
+    .navbar-toggler {
+      /* border: 1px solid #f0c64a !important;
+      background: #f0c64a !important; */
+      border: 1px solid #335875 !important;
+      background: #335875c7 !important;
+
+      border-radius: 10px;
+      padding: 7px 10px
+    }
+
+    .navbar-toggler-icon {
+      filter: none;
+      background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27%23172838%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e") !important
+    }
+
+    /* 03 hero */
+    .hero {
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: #101820
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: linear-gradient(90deg, rgba(5, 12, 17, .94), rgba(5, 12, 17, .67) 48%, rgba(5, 12, 17, .2)), url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=2000&q=85") center/cover
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 650px;
+      height: 650px;
+      border: 1px solid #ffffff22;
+      border-radius: 50%;
+      right: -110px;
+      top: 40px;
+      box-shadow: 0 0 0 45px #ffffff08, 0 0 0 90px #ffffff05
+    }
+
+    .hero-content {
+      padding: 100px 0 90px
+    }
+
+    .hero-kicker {
+      color: var(--gold);
+      font-weight: 900;
+      letter-spacing: .22em;
+      font-size: .82rem
+    }
+
+    .hero h1 {
+      font-size: clamp(3.7rem, 9vw, 8.4rem);
+      line-height: .88;
+      font-weight: 900;
+      letter-spacing: -.055em;
+      margin: 24px 0
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+      display: block
+    }
+
+    .hero p {
+      max-width: 580px;
+      color: #d2d9dc;
+      font-size: 1.05rem
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-top: 42px;
+      color: #c7d0d3;
+      font-size: .85rem
+    }
+
+    .hero-meta strong {
+      display: block;
+      color: #fff;
+      font: 800 1.7rem "Barlow Condensed";
+      letter-spacing: .04em
+    }
+
+    .hero-ball {
+      position: absolute;
+      right: 10%;
+      bottom: 12%;
+      width: 170px;
+      opacity: .85;
+      filter: drop-shadow(0 25px 35px #0008);
+      animation: floatBall 6s ease-in-out infinite
+    }
+
+    @keyframes floatBall {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-10deg)
+      }
+
+      50% {
+        transform: translateY(-18px) rotate(8deg)
+      }
+    }
+
+    /* intro */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+      align-items: center
+    }
+
+    .intro-visual {
+      min-height: 430px;
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #214f3d, #101820)
+    }
+
+    .intro-visual:before {
+      content: "CPBL";
+      position: absolute;
+      font: 900 clamp(7rem, 18vw, 15rem)/1 "Barlow Condensed";
+      color: #ffffff0d;
+      right: -10px;
+      bottom: -20px
+    }
+
+    .intro-stamp {
+      position: absolute;
+      left: 28px;
+      top: 28px;
+      border: 1px solid #ffffff66;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 99px;
+      font-weight: 900;
+      letter-spacing: .12em
+    }
+
+    .intro-bigyear {
+      position: absolute;
+      left: 35px;
+      bottom: 25px;
+      color: #fff;
+      font: 900 clamp(5rem, 12vw, 9rem)/.9 "Barlow Condensed"
+    }
+
+    .intro-bigyear small {
+      display: block;
+      font: 700 .9rem "Noto Sans TC";
+      letter-spacing: .18em;
+      color: var(--gold)
+    }
+
+    .intro-copy p {
+      color: #66747a
+    }
+
+    .principle {
+      display: flex;
+      gap: 15px;
+      padding: 18px 0;
+      border-bottom: 1px solid #d9ddd8
+    }
+
+    .principle i {
+      color: var(--cpbl-blue);
+      font-size: 1.35rem;
+      margin-top: 4px
+    }
+
+    .principle:nth-of-type(2) i {
+      color: var(--cpbl-red)
+    }
+
+    .principle strong {
+      display: block
+    }
+
+    /* team carousel */
+    .team-carousel .carousel-item {
+      min-height: 510px;
+      background: #121d25;
+      position: relative
+    }
+
+    .team-carousel .carousel-item:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #081118f2, #08111888 62%, #08111820)
+    }
+
+    .carousel-bg {
+      position: absolute;
+      inset: 0;
+      background-position: center;
+      background-size: cover;
+      opacity: .65
+    }
+
+    .carousel-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      padding: 90px 8%;
+      color: white
+    }
+
+    .team-chip {
+      display: inline-flex;
+      border: 1px solid #ffffff70;
+      border-radius: 99px;
+      padding: 6px 13px;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .1em
+    }
+
+    .carousel-copy h3 {
+      font: 900 clamp(3rem, 7vw, 6.4rem)/.95 "Barlow Condensed";
+      margin: 22px 0
+    }
+
+    .carousel-copy p {
+      color: #d2d9dc;
+      max-width: 520px
+    }
+
+    .carousel-indicators [data-bs-target] {
+      width: 26px;
+      height: 5px;
+      border: 0;
+      border-radius: 10px
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 8%
+    }
+
+    /* stats */
+    .stat-band {
+      background: #111c24;
+      color: #fff;
+      padding: 52px 0
+    }
+
+    .stat-box {
+      padding: 12px 25px;
+      border-right: 1px solid #ffffff20
+    }
+
+    .stat-box:last-child {
+      border: 0
+    }
+
+    .stat-num {
+      font: 900 clamp(2.8rem, 5vw, 4.5rem)/1 "Barlow Condensed";
+      color: var(--gold)
+    }
+
+    .stat-label {
+      color: #b9c4c7;
+      font-size: .88rem;
+      font-weight: 700
+    }
+
+    /* timeline */
+    .timeline-wrap {
+      position: relative;
+      max-width: 1080px;
+      margin: auto
+    }
+
+    .timeline-wrap:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: linear-gradient(var(--gold), #39765b);
+      transform: translateX(-50%)
+    }
+
+    .timeline-item {
+      width: 50%;
+      padding: 0 52px 55px 0;
+      position: relative
+    }
+
+    .timeline-item:nth-child(even) {
+      margin-left: 50%;
+      padding: 0 0 55px 52px
+    }
+
+    .timeline-item:after {
+      content: "";
+      position: absolute;
+      right: -9px;
+      top: 12px;
+      width: 18px;
+      height: 18px;
+      border: 4px solid var(--gold);
+      background: var(--ink);
+      border-radius: 50%;
+      z-index: 2
+    }
+
+    .timeline-item:nth-child(even):after {
+      right: auto;
+      left: -9px
+    }
+
+    .timeline-card {
+      background: #1a2832;
+      border: 1px solid #ffffff17;
+      border-radius: 18px;
+      padding: 24px;
+      transition: .3s
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-5px);
+      border-color: #e9b94988
+    }
+
+    .timeline-year {
+      font: 900 2.3rem "Barlow Condensed";
+      color: var(--gold)
+    }
+
+    .timeline-card h3 {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #fff
+    }
+
+    .timeline-card p {
+      color: #aeb9bd;
+      font-size: .92rem;
+      margin: 0
+    }
+
+    .timeline-tag {
+      display: inline-block;
+      background: #ffffff12;
+      color: #d9e0e2;
+      border-radius: 99px;
+      padding: 4px 10px;
+      font-size: .72rem;
+      margin-top: 13px
+    }
+
+    /* team overview */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .team-mini {
+      background: #fff;
+      border: 1px solid #e5e6df;
+      border-radius: 18px;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+      transition: .3s
+    }
+
+    .team-mini:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow)
+    }
+
+    .team-mini:after {
+      content: "";
+      position: absolute;
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      right: -35px;
+      top: -35px;
+      background: var(--team-color);
+      opacity: .12
+    }
+
+    .team-emblem {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      /* background: linear-gradient(145deg, #fff, #e8ecef); */
+      background: linear-gradient(145deg, #FFFFFF, #f7f4f4);
+
+      border: 3px solid var(--team-color);
+      color: var(--team-color);
+      font: 900 1.55rem "Barlow Condensed";
+      margin-bottom: 18px;
+      box-shadow: 0 5px 16px #10203018
+    }
+
+    .team-mini h3 {
+      white-space: nowrap;
+      font-size: clamp(.94rem, 1.5vw, 1.12rem);
+      letter-spacing: -.035em
+    }
+
+    .team-mini:nth-child(2) h3 {
+      font-size: clamp(.88rem, 1.25vw, 1.05rem);
+      letter-spacing: -.055em
+    }
+
+    .team-mini h3 {
+      font-weight: 900;
+      font-size: 1.1rem
+    }
+
+    .team-mini p {
+      color: #68757b;
+      font-size: .85rem;
+      margin-bottom: 12px
+    }
+
+    .team-mini a {
+      color: #17232d;
+      font-size: .82rem;
+      font-weight: 900
+    }
+
+    /* team profiles */
+    .team-profile {
+      padding: 0;
+      overflow: hidden;
+      background: #fff
+    }
+
+    .team-profile-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 470px
+    }
+
+    .team-profile:nth-of-type(even) .team-profile-inner {
+      direction: rtl
+    }
+
+    .team-profile:nth-of-type(even) .team-profile-copy {
+      direction: ltr
+    }
+
+    .team-profile-visual {
+      min-height: 420px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, var(--team-color), #101820);
+      background-size: cover;
+      background-position: center
+    }
+
+    .team-profile-visual:before {
+      z-index: 0;
+      text-shadow: 0 8px 35px #0006
+    }
+
+    .team-profile-visual .visual-label {
+      background: #101820b8;
+      padding: 9px 14px;
+      border-radius: 8px;
+      backdrop-filter: blur(6px)
+    }
+
+    .team-profile-visual:before {
+      content: attr(data-mark);
+      position: absolute;
+      right: -15px;
+      bottom: -65px;
+      color: #ffffff20;
+      font: 900 18rem/1 "Barlow Condensed"
+    }
+
+    .team-profile-visual:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, #07101888, transparent 70%)
+    }
+
+    .team-profile-visual .visual-label {
+      position: absolute;
+      z-index: 1;
+      left: 34px;
+      bottom: 28px;
+      color: white;
+      font-weight: 900;
+      letter-spacing: .15em
+    }
+
+    .team-profile-copy {
+      padding: 65px clamp(28px, 6vw, 85px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center
+    }
+
+    .team-profile-copy .team-name-en {
+      font: 800 .85rem "Barlow Condensed";
+      letter-spacing: .2em;
+      color: #89949a
+    }
+
+    .team-profile-copy h3 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 900;
+      margin: 8px 0 16px
+    }
+
+    .team-profile-copy p {
+      color: #657178
+    }
+
+    .team-facts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 22px 0
+    }
+
+    .fact {
+      background: #f1f3ef;
+      padding: 13px 15px;
+      border-radius: 12px
+    }
+
+    .fact small {
+      display: block;
+      color: #7b878c;
+      font-size: .72rem;
+      font-weight: 800
+    }
+
+    .fact strong {
+      font-size: .94rem
+    }
+
+    .team-profile-copy .btn {
+      align-self: flex-start
+    }
+
+    /* comparison */
+    .compare-table {
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 16px
+    }
+
+    .compare-table th {
+      background: #24343f;
+      color: var(--gold);
+      padding: 16px;
+      text-align: left;
+      font-size: .85rem
+    }
+
+    .compare-table td {
+      background: #192832;
+      color: #e5eaeb;
+      padding: 16px;
+      border-top: 1px solid #ffffff12;
+      font-size: .9rem
+    }
+
+    .compare-table tr:hover td {
+      background: #243640
+    }
+
+    .compare-table td:first-child {
+      font-weight: 900
+    }
+
+    /* moments */
+    .moment-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      grid-template-rows: 220px 220px;
+      gap: 14px
+    }
+
+    .moment {
+      border-radius: 18px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #315f4a, #101820)
+    }
+
+    .moment:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, #071018e8, transparent 75%)
+    }
+
+    .moment>* {
+      position: relative
+    }
+
+    .moment:first-child {
+      grid-row: span 2;
+      background: linear-gradient(145deg, #244f3c, #0d171e)
+    }
+
+    .moment:nth-child(2) {
+      background: linear-gradient(145deg, #8b6230, #17232d)
+    }
+
+    .moment:nth-child(3) {
+      background: linear-gradient(145deg, #315a7a, #101820)
+    }
+
+    .moment:nth-child(4) {
+      background: linear-gradient(145deg, #7c343c, #101820)
+    }
+
+    .moment h3 {
+      font-weight: 900;
+      font-size: 1.35rem
+    }
+
+    .moment span {
+      color: var(--gold);
+      font-size: .75rem;
+      font-weight: 900;
+      letter-spacing: .14em
+    }
+
+    /* vision / FAQ / contact */
+    .vision-card {
+      height: 100%;
+      padding: 34px;
+      border: 1px solid #ffffff20;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #1b2c36, #111b22)
+    }
+
+    .vision-card i {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 25px
+    }
+
+    .vision-card h3 {
+      font-weight: 900
+    }
+
+    .vision-card p {
+      color: #aeb9bd
+    }
+
+    .accordion-item {
+      border: 0;
+      margin-bottom: 12px;
+      border-radius: 12px !important;
+      overflow: hidden
+    }
+
+    .accordion-button {
+      font-weight: 800;
+      padding: 20px;
+      background: #fff
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: #e9efe9;
+      color: #1c4938;
+      box-shadow: none
+    }
+
+    .accordion-body {
+      color: #66747a;
+      background: #fff
+    }
+
+    .contact-card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 34px;
+      box-shadow: var(--shadow)
+    }
+
+    .form-control,
+    .form-select {
+      border: 1px solid #d9dfdc;
+      border-radius: 10px;
+      padding: 13px
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--grass);
+      box-shadow: 0 0 0 .2rem #39765b20
+    }
+
+    .contact-info {
+      background: #172630;
+      color: #fff;
+      border-radius: 22px;
+      padding: 35px;
+      height: 100%
+    }
+
+    .contact-info p {
+      color: #bdc8cb
+    }
+
+    .contact-line {
+      display: flex;
+      gap: 14px;
+      margin: 22px 0;
+      align-items: flex-start
+    }
+
+    .contact-line i {
+      color: var(--gold);
+      margin-top: 5px
+    }
+
+    footer {
+      background: #080e13;
+      color: #9ba8ad;
+      padding: 45px 0 25px
+    }
+
+    footer a {
+      color: #cbd3d5
+    }
+
+    footer a:hover {
+      color: var(--gold)
+    }
+
+    .footer-brand {
+      font: 900 2rem "Barlow Condensed";
+      color: #fff
+    }
+
+    .back-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1000;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #101820;
+      box-shadow: 0 8px 25px #0003;
+      display: none
+    }
+
+    .back-top.show {
+      display: grid;
+      place-items: center
+    }
+
+    .toast-note {
+      font-size: .82rem;
+      color: #39765b;
+      min-height: 24px
+    }
+
+    .search-result {
+      font-size: .8rem;
+      color: #6a777c;
+      margin-top: 10px
+    }
+
+    .intro-visual {
+      background: linear-gradient(120deg, #102f50dd, #102f50a8), url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=85") center/cover
+    }
+
+    .timeline-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 12px 0 2px
+    }
+
+    .history-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 7px;
+      /* background: #ffffff12; */
+      background: var(--logo-color, #e9b949);
+      border: 1px solid #ffffff24;
+      color: #f4f6f7;
+      font-size: .72rem;
+      font-weight: 900
+    }
+
+    /* *** */
+    .history-logo_cpbl {
+      display: inline;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 7px;
+      /* background: #ffffff12; */
+      background: var(--logo-color, #e9b949);
+      border: 1px solid #ffffff24;
+      color: #f4f6f7;
+      font-size: .72rem;
+      font-weight: 900
+    }
+
+    /* .history-logo b { */
+    .history-logo img {
+      display: grid;
+      place-items: center;
+      /* width: 22px;
+      height: 22px; */
+      width: 50px;
+      height: 50px;
+
+      border-radius: 50%;
+      background: var(--logo-color, #e9b949);
+      color: #17232d;
+      font-size: .68rem
+    }
+
+    .team-wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 16px;
+      padding: 8px 13px;
+      border: 1px solid #ffffff55;
+      border-radius: 999px;
+      background: #07101888;
+      color: #fff;
+      font-weight: 900;
+      letter-spacing: .04em
+    }
+
+    .team-wordmark b {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--team-color);
+      font-family: "Barlow Condensed"
+    }
+
+    .stats-2026 {
+      background: linear-gradient(135deg, #10283b, #172b38 55%, #263a48);
+      color: #fff
+    }
+
+    .stats-2026 .table-wrap {
+      overflow: auto;
+      border: 1px solid #ffffff24;
+      border-radius: 16px
+    }
+
+    .stats-2026 table {
+      min-width: 760px;
+      width: 100%;
+      border-collapse: collapse
+    }
+
+    .stats-2026 th {
+      background: #e9b949;
+      color: #152635;
+      padding: 14px;
+      text-align: left;
+      white-space: nowrap
+    }
+
+    .stats-2026 td {
+      padding: 13px 14px;
+      border-top: 1px solid #ffffff18;
+      color: #eaf0f2
+    }
+
+    .stats-2026 tr:nth-child(even) td {
+      background: #ffffff08
+    }
+
+    .stats-2026 .team-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dot);
+      margin-right: 8px
+    }
+
+    .stats-note {
+      color: #c1cbd0;
+      font-size: .83rem
+    }
+
+    #pageLoader {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      background: #102536;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      transition: opacity .55s ease, visibility .55s
+    }
+
+    .loader-inner {
+      text-align: center
+    }
+
+    .loader-ball {
+      width: 66px;
+      height: 66px;
+      border: 3px solid #ffffff35;
+      border-top-color: #efc34c;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      animation: spinBall .8s linear infinite;
+      position: relative
+    }
+
+    .loader-ball:after {
+      content: "";
+      position: absolute;
+      inset: 11px;
+      border: 2px dashed #ffffff70;
+      border-radius: 50%
+    }
+
+    @keyframes spinBall {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .loader-title {
+      font: 900 1.45rem "Barlow Condensed";
+      letter-spacing: .18em
+    }
+
+    .loader-sub {
+      font-size: .78rem;
+      color: #b8c7d0;
+      letter-spacing: .18em;
+      margin-top: 5px
+    }
+
+    #pageLoader.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none
+    }
+
+    body.intro-lock {
+      overflow: hidden
+    }
+
+    #disclaimerModal .modal-content {
+      border: 0;
+      border-radius: 22px;
+      overflow: hidden
+    }
+
+    #disclaimerModal .modal-header {
+      background: #17364d;
+      color: #fff;
+      border: 0;
+      padding: 24px 28px
+    }
+
+    #disclaimerModal .modal-body {
+      padding: 26px 30px;
+      color: #46545d
+    }
+
+    #disclaimerModal .notice-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: #e9b949;
+      color: #173044;
+      margin-right: 10px
+    }
+
+    @media(max-width:991px) {
+      .navbar-collapse {
+        padding: 12px 0
+      }
+
+      .hero {
+        min-height: 610px
+      }
+
+      .hero-ball {
+        width: 120px;
+        right: 5%
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px
+      }
+
+      .intro-visual {
+        min-height: 330px
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .team-profile-inner {
+        grid-template-columns: 1fr
+      }
+
+      .team-profile-visual {
+        min-height: 280px
+      }
+
+      .team-profile:nth-of-type(even) .team-profile-inner {
+        direction: ltr
+      }
+
+      .moment-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 220px
+      }
+
+      .moment:first-child {
+        grid-row: auto;
+        grid-column: span 2
+      }
+    }
+
+    @media(max-width:767px) {
+      .section {
+        padding: 72px 0
+      }
+
+      .hero {
+        min-height: 620px
+      }
+
+      .hero-content {
+        padding: 90px 0
+      }
+
+      .hero-ball {
+        display: none
+      }
+
+      .stat-box {
+        border-right: 0;
+        border-bottom: 1px solid #ffffff20;
+        padding: 18px 10px
+      }
+
+      .timeline-wrap {
+        padding-left: 28px
+      }
+
+      .timeline-wrap:before {
+        left: 7px
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(even) {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 28px 25px
+      }
+
+      .timeline-item:after,
+      .timeline-item:nth-child(even):after {
+        left: -28px;
+        right: auto
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr
+      }
+
+      .team-profile-copy {
+        padding: 38px 25px
+      }
+
+      .team-facts {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .moment-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto
+      }
+
+      .moment,
+      .moment:first-child {
+        min-height: 190px;
+        grid-column: auto
+      }
+
+      .carousel-copy {
+        padding: 75px 12%
+      }
+
+      .team-carousel .carousel-item {
+        min-height: 480px
+      }
+
+      .contact-card,
+      .contact-info {
+        padding: 25px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      *,
+      *:before,
+      *:after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important
+      }
+    }
+  </style>
+
+
+  <!-- *** -->
+  <!-- logo -->
+  <style>
+    .team-emblem img {
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+      padding: 6px;
+    }
+  </style>
+
+</head>
+
+<body class="intro-lock">
+
+  <!-- *** -->
+  <!-- test logo -->
+  <!-- <div class="team-emblem">
+    <img src="images/logo-lions.png" alt="中信兄弟 Logo">
+  </div> -->
+
+
+  <div id="pageLoader" role="status" aria-label="網站載入中">
+    <div class="loader-inner">
+      <div class="loader-ball"></div>
+      <div class="loader-title">CPBL · SIX TEAMS</div>
+      <div class="loader-sub">TAIWAN PROFESSIONAL BASEBALL</div>
+    </div>
+  </div>
+  <div class="topline"></div>
+
+  <!-- SECTION 01｜聯盟社群與快速連結（保留原始社群列功能） -->
+  <section class="social-strip" id="s01">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span><i class="fa-solid fa-baseball me-2"></i>TAIWAN PROFESSIONAL BASEBALL</span>
+      <div>
+        <a href="https://bit.ly/30QBUwb" target="_blank" rel="noopener" aria-label="CPBL Facebook"><i
+            class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://bit.ly/2wn2m2B" target="_blank" rel="noopener" aria-label="CPBL Instagram"><i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="http://bit.ly/2JKGTtd" target="_blank" rel="noopener" aria-label="CPBL YouTube"><i
+            class="fa-brands fa-youtube"></i></a>
+        <a href="https://twitter.com/CPBL" target="_blank" rel="noopener" aria-label="CPBL X／Twitter"><i
+            class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.cpbl.com.tw/" target="_blank" rel="noopener" aria-label="CPBL 官方網站"><i
+            class="fa-solid fa-globe"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02｜主導覽列（保留 Bootstrap Navbar、登入與註冊入口） -->
+
+  <nav class="navbar navbar-expand-xl navbar-dark sticky-top" id="s02">
+
+
+    <div class="container">
+      <a class="navbar-brand" href="#s03"><span class="brand-mark"><i class="fa-solid fa-baseball"></i></span><span>CPBL
+          <small class="d-block text-secondary" style="font-size:.58rem;letter-spacing:.2em">TAIWAN
+            BASEBALL</small></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="切換導覽"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-xl-center">
+          <li class="nav-item"><a class="nav-link" href="#s03">首頁</a></li>
+          <li class="nav-item"><a class="nav-link" href="#s04">聯盟介紹</a></li>
+          <li class="nav-item"><a class="nav-link" href="#s06">聯盟數據</a></li>
+          <li class="nav-item"><a class="nav-link" href="#s07">歷史時間軸</a></li>
+          <li class="nav-item"><a class="nav-link" href="#s08">六隊巡禮</a></li>
+          <li class="nav-item"><a class="nav-link" href="#s15">加盟比較</a></li>
+          <li class="nav-item"><a class="nav-link" href="#s15-stats">2026 戰績</a></li>
+          <li class="nav-item"><a class="nav-link" href="#s19">聯絡我們</a></li>
+        </ul>
+        <div class="d-flex gap-2 ms-xl-3 mt-3 mt-xl-0">
+          <button class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">登入</button>
+          <button class="btn btn-sm btn-sport" data-bs-toggle="modal" data-bs-target="#registerModal">加入會員</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 03｜首頁主視覺 -->
+  <section class="hero" id="s03">
+    <div class="container hero-content">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="hero-kicker animate__animated animate__fadeInDown">ONE LEAGUE · SIX TEAMS · ONE PASSION</div>
+          <h1 class="display-font animate__animated animate__fadeInLeft">PLAY BALL<span>台灣棒球魂</span></h1>
+          <p class="animate__animated animate__fadeInUp">從 1990 年職棒元年，到六支球團並肩競逐。走進中華職棒，認識每一支球隊的傳承、城市與故事。</p>
+          <div class="d-flex gap-3 flex-wrap mt-4">
+            <a href="#s08" class="btn btn-sport">探索六支球隊 <i class="fa-solid fa-arrow-right ms-2"></i></a>
+            <a href="#s07" class="btn btn-outline-light px-4 py-3">回顧聯盟歷史</a>
+          </div>
+          <div class="hero-meta">
+            <div><strong>1990</strong>職棒元年</div>
+            <div><strong>06</strong>現役球團</div>
+            <div><strong>35+</strong>職棒歲月（截至 2026）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-ball"><i class="fa-solid fa-baseball" style="font-size:9rem;color:#fff"></i></div>
+  </section>
+
+  <!-- SECTION 04｜聯盟介紹 -->
+  <section class="section" id="s04">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-visual wow animate__animated animate__fadeInLeft">
+          <span class="intro-stamp">EST. 1989 · PLAYED SINCE 1990</span>
+          <div class="intro-bigyear display-font">1990<small>職棒元年・台灣職業棒球新篇章</small></div>
+        </div>
+        <div class="intro-copy wow animate__animated animate__fadeInRight">
+          <span class="eyebrow">ABOUT THE LEAGUE</span>
+          <h2 class="section-title">一座球場，<br>凝聚整座島嶼。</h2>
+          <p>中華職業棒球大聯盟（Chinese Professional Baseball League，CPBL）是台灣職業棒球的重要賽事組織。聯盟於 1989 年成立，1990 年 3 月 17
+            日正式開打，開啟台灣職棒元年。</p>
+          <p>從早期四隊出發，歷經球團擴編、轉手與重整，今日六支球團分布於台灣不同城市，持續以地方連結、球員培育與精彩賽事，拓展棒球文化。</p>
+          <div class="principle"><i class="fa-solid fa-people-group"></i>
+            <div><strong>連結球迷與城市</strong><span class="text-secondary small">以主場文化建立球團與地方的情感。</span></div>
+          </div>
+          <div class="principle"><i class="fa-solid fa-trophy"></i>
+            <div><strong>競技與傳承並進</strong><span class="text-secondary small">讓每一代球員與球迷共同寫下新篇章。</span></div>
+          </div>
+          <a class="btn btn-sport mt-4" href="https://www.cpbl.com.tw/" target="_blank" rel="noopener">前往 CPBL 官方網站 <i
+              class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05｜六隊品牌輪播（保留原始 Carousel 功能，擴充六隊） -->
+  <section class="section-dark p-0" id="s05">
+    <div id="teamCarousel" class="carousel slide team-carousel" data-bs-ride="carousel" data-bs-interval="5200">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="中信兄弟"></button>
+        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1" aria-label="統一獅"></button>
+        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="2" aria-label="樂天桃猿"></button>
+        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="3" aria-label="富邦悍將"></button>
+        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="4" aria-label="味全龍"></button>
+        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="5" aria-label="台鋼雄鷹"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <!-- <div class="carousel-bg"
+            style="background-image:url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1800&q=80')">
+          </div> -->
+          <div class="carousel-bg" style="background-image:url('images/Brother/Banner.jpg')">
+          </div>
+
+          <div class="carousel-copy"><span class="team-chip">TAICHUNG · EST. 1990 CPBL</span>
+            <h3 style="color:var(--brothers); white-space: nowrap;">中信兄弟</h3>
+            <p>承接兄弟象的球迷記憶，以黃色應援文化與台中主場，延續台灣職棒經典傳統。</p><a href="#s09" class="btn btn-sport">認識球隊</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <!-- *** -->
+          <!-- <div class="carousel-bg"
+            style="background-image:url('https://images.unsplash.com/photo-1566577739112-5180d4bf9390?auto=format&fit=crop&w=1800&q=80')">
+          </div> -->
+          <!-- <div class="carousel-bg"
+            style="background-image:linear-gradient(to right,#101820,#10182017),url(images/Lion/images\ \(1\).jpg)">
+          </div> -->
+          <div class="carousel-bg"
+            style="background-image:linear-gradient(to right,#101820,#10182017),url(images/Lion/1697948508_i8X6V.webp)">
+          </div>
+
+          <div class="carousel-copy"><span class="team-chip">TAINAN · EST. 1990 CPBL</span>
+            <!-- *** -->
+            <!-- <h3 style="color:var(--lions)">統一 7-ELEVEn 獅</h3> -->
+            <h3 style="color:var(--lions); white-space: nowrap;">統一 7-ELEVEn 獅</h3>
+
+            <p>創始球團之一，長年深耕南台灣，以獅隊精神與台南球迷建立深厚連結。</p><a href="#s10" class="btn btn-sport">認識球隊</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <!-- <div class="carousel-bg"
+            style="background-image:url('https://images.unsplash.com/photo-1471295253337-3ceaaedca402?auto=format&fit=crop&w=1800&q=80')">
+          </div> -->
+          <div class="carousel-bg"
+            style="background-image:linear-gradient(to right,#101820,#10182017),url(images/Monkey/banner.webp)">
+          </div>
+
+          <div class="carousel-copy"><span class="team-chip">TAOYUAN · FRANCHISE LINEAGE 2003</span>
+            <h3 style="color:var(--monkeys); white-space: nowrap;">樂天桃猿</h3>
+            <p>從第一金剛、La New 熊、Lamigo 桃猿到樂天桃猿，見證球團品牌與經營者更迭。</p><a href="#s11" class="btn btn-sport">認識球隊</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <!-- <div class="carousel-bg"
+            style="background-image:url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1800&q=80')">
+          </div> -->
+          <div class="carousel-bg"
+            style="background-image:linear-gradient(to right,#101820,#10182017),url(images/Fubon/banner.jpg)">
+          </div>
+
+          <div class="carousel-copy"><span class="team-chip">NEW TAIPEI · FRANCHISE LINEAGE 1993</span>
+            <!-- <h3 style="color:#70b5ef; white-space: nowrap;">富邦悍將</h3> -->
+            <h3 style="color:var(--guardians); white-space: nowrap;">富邦悍將</h3>
+            <p>承接俊國熊、興農牛、義大犀牛的球團沿革，現以新莊為主要主場。</p><a href="#s12" class="btn btn-sport">認識球隊</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <!-- <div class="carousel-bg"
+            style="background-image:url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=1800&q=80')">
+          </div> -->
+          <div class="carousel-bg"
+            style="background-image:linear-gradient(to right,#101820,#10182017),url(images/Dragon/images.jpg)">
+          </div>
+
+          <div class="carousel-copy"><span class="team-chip">TAIPEI · RETURNED 2019 / 2021</span>
+            <!-- <h3 style="color:#f16b7d; white-space: nowrap;">味全龍</h3> -->
+            <h3 style="color:var(--dragons); white-space: nowrap;">味全龍</h3>
+            <p>昔日創始球團之一，1999 年解散，2019 年重新加盟，2021 年重返一軍賽事。</p><a href="#s13" class="btn btn-sport">認識球隊</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <!-- <div class="carousel-bg"
+            style="background-image:url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1800&q=80')">
+          </div> -->
+          <div class="carousel-bg"
+            style="background-image:linear-gradient(to right,#101820,#10182017),url(images/Hawks/banner.jpg)">
+          </div>
+
+          <div class="carousel-copy"><span class="team-chip">KAOHSIUNG · JOINED 2022 / 1ST TEAM 2024</span>
+            <!-- <h3 style="color:#69c9ad; white-space: nowrap;">台鋼雄鷹</h3> -->
+            <h3 style="color:var(--hawks); white-space: nowrap;">台鋼雄鷹</h3>
+            <p>中職第六隊，以高雄為發展基地，2023 年投入二軍、2024 年正式參與一軍賽事。</p><a href="#s14" class="btn btn-sport">認識球隊</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev"><span
+          class="carousel-control-prev-icon"></span><span class="visually-hidden">上一隊</span></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next"><span
+          class="carousel-control-next-icon"></span><span class="visually-hidden">下一隊</span></button>
+    </div>
+  </section>
+
+  <!-- SECTION 06｜聯盟發展數據（Counter-Up 動畫保留並改為有來源依據的基礎數字） -->
+  <section class="stat-band" id="s06">
+    <div class="container">
+      <div class="row text-center g-3">
+        <div class="col-6 col-lg-3 stat-box">
+          <div class="stat-num counter" data-target="6">0</div>
+          <div class="stat-label">現役球團數</div>
+        </div>
+        <div class="col-6 col-lg-3 stat-box">
+          <div class="stat-num counter" data-target="1990">0</div>
+          <div class="stat-label">職棒元年</div>
+        </div>
+        <div class="col-6 col-lg-3 stat-box">
+          <div class="stat-num counter" data-target="4">0</div>
+          <div class="stat-label">創始球團數</div>
+        </div>
+        <div class="col-6 col-lg-3 stat-box">
+          <div class="stat-num counter" data-target="2024">0</div>
+          <div class="stat-label">六隊一軍時代起點</div>
+        </div>
+      </div>
+      <p class="text-center small mt-3 mb-0" style="color:#7f8c91">註：此處為聯盟沿革里程碑，不代表當季即時戰績或觀眾數。</p>
+    </div>
+  </section>
+
+  <!-- SECTION 07｜聯盟歷史時間軸（依時間由近至遠；重要節點） -->
+  <section class="section section-deep" id="s07">
+    <div class="container">
+      <div class="section-head text-center wow animate__animated animate__fadeInUp">
+        <span class="eyebrow">THE LEAGUE TIMELINE</span>
+
+        <!-- *** -->
+        <div class="timeline-logos">
+          <span class="history-logo_cpbl" style="--logo-color: var(--cpbl-blue);">
+            <img src="images/CPBL_logo/Logo_cpbl_new.png"></img>
+          </span>
+        </div>
+
+        <h2 class="section-title">從四隊出發，走向六隊新時代</h2>
+        <p class="section-lead mx-auto">依照年代回顧聯盟擴編、球團更迭與新球隊加入的重要節點。以下以較新的事件排在上方。</p>
+      </div>
+      <div class="timeline-wrap">
+        <article class="timeline-item wow animate__animated animate__fadeInUp">
+          <div class="timeline-card">
+            <div class="timeline-year">2024</div>
+
+            <!-- <div class="timeline-logos"><span class="history-logo"><b style="--logo-color:#1e8a72">H</b>台鋼雄鷹</span>
+            </div> -->
+            <div class="timeline-logos">
+              <span class="history-logo" style="--logo-color: var(--hawksLight);">
+                <img src="images/CPBL_logo/225px-Logo_hawks.png"></img>
+              </span>
+            </div>
+
+
+            <h3>台鋼雄鷹加入一軍賽事，六隊規模成形</h3>
+            <p>台鋼雄鷹於 2023 年參與二軍賽事，2024 年正式投入一軍，聯盟重回六球團規模。</p><span class="timeline-tag">第六隊・一軍首季</span>
+          </div>
+        </article>
+        <article class="timeline-item wow animate__animated animate__fadeInUp">
+          <div class="timeline-card">
+            <div class="timeline-year">2021</div>
+
+            <!-- <div class="timeline-logos"><span class="history-logo"><b style="--logo-color:#c51f36">D</b>味全龍</span></div> -->
+            <div class="timeline-logos">
+              <span class="history-logo" style="--logo-color: var(--dragonsLight);">
+                <img src="images/CPBL_logo/225px-Logo_dragons.png"></img>
+              </span>
+            </div>
+
+            <h3>味全龍重返一軍</h3>
+            <p>味全龍在 2019 年重新加盟後，先參與二軍賽事，2021 年重返一軍舞台。</p><span class="timeline-tag">球團復出</span>
+          </div>
+        </article>
+        <article class="timeline-item wow animate__animated animate__fadeInUp">
+          <div class="timeline-card">
+            <div class="timeline-year">2019</div>
+            <!-- <div class="timeline-logos"><span class="history-logo"><b style="--logo-color:#c51f36">D</b>味全龍</span></div> -->
+            <div class="timeline-logos">
+              <span class="history-logo" style="--logo-color: var(--dragonsLight);">
+                <img src="images/CPBL_logo/225px-Logo_dragons.png"></img>
+              </span>
+            </div>
+
+
+            <h3>味全龍正式加盟，成為第五隊</h3>
+            <p>聯盟於 2019 年通過味全龍加盟案，這支曾於 1999 年解散的創始球團重返中職。</p><span class="timeline-tag">第五隊</span>
+          </div>
+        </article>
+        <article class="timeline-item wow animate__animated animate__fadeInUp">
+          <div class="timeline-card">
+            <div class="timeline-year">2017</div>
+
+            <!-- <div class="timeline-logos">
+              <span class="history-logo"><b style="--logo-color:#1764a5">G</b>富邦悍將</span>
+              <span class="history-logo"><b style="--logo-color:#76a84b">犀</b>義大犀牛</span>
+            </div> -->
+            <div class="timeline-logos">
+              <span class="history-logo" style="--logo-color: var(--guardiansLight);">
+                <img src="images/CPBL_logo/225px-Logo_fubon.png"></img>
+              </span>
+
+              <span class="history-logo" style="--logo-color: var(--Rhinos);">
+                <img src="images/old/180px-義大犀牛隊LOGO.jpg"></img>
+              </span>
+
+            </div>
+
+
+            <h3>富邦悍將接手義大犀牛</h3>
+            <p>富邦育樂接手義大犀牛，球隊更名為富邦悍將，延續俊國熊一脈的球團沿革。</p><span class="timeline-tag">球團轉手・更名</span>
+          </div>
+        </article>
+        <article class="timeline-item wow animate__animated animate__fadeInUp">
+          <div class="timeline-card">
+            <div class="timeline-year">2011</div>
+
+            <!-- <div class="timeline-logos"><span class="history-logo"><b style="--logo-color:#d92735">M</b>Lamigo 桃猿</span>
+            </div> -->
+
+            <div class="timeline-logos">
+              <span class="history-logo" style="--logo-color: var(--Lamigo);">
+                <img src="images/old/180px-Lamigo2017.png"></img>
+              </span>
+            </div>
+
+
+            <h3>Lamigo 桃猿時代展開</h3>
+            <p>La New 熊更名為 Lamigo 桃猿，球團主場與品牌發展重心逐步移往桃園。</p><span class="timeline-tag">品牌更名</span>
+          </div>
+        </article>
+        <article class="timeline-item wow animate__animated animate__fadeInUp">
+          <div class="timeline-card">
+            <div class="timeline-year">2004</div>
+            <!-- <div class="timeline-logos"><span class="history-logo"><b style="--logo-color:#c92735">熊</b>La New
+                熊</span><span class="history-logo"><b style="--logo-color:#d92735">M</b>第一金剛</span></div> -->
+            <div class="timeline-logos">
+              <span class="history-logo" style="--logo-color: var(--LaNew);">
+                <img src="images/old/LaNew.jpg"></img>
+              </span>
+
+              <span class="history-logo" style="--logo-color: var(--AGAN);">
+                <img src="images/old/180px-AGAN.jpg"></img>
+              </span>
+
+            </div>
+
+            <h3>La New 熊接手第一金剛</h3>
+            <p>La New 接手第一金剛球隊，改名 La New 熊，開啟後續桃猿球團的歷史脈絡。</p><span class="timeline-tag">球團接手</span>
+          </div>
+        </article>
+        <article class="timeline-item wow animate__animated animate__fadeInUp">
+          <div class="timeline-card">
+            <div class="timeline-year">1999</div>
+            <!-- <div class="timeline-logos"><span class="history-logo"><b style="--logo-color:#c51f36">D</b>味全龍</span><span
+                class="history-logo"><b style="--logo-color:#d6a62b">虎</b>三商虎</span></div> -->
+
+            <div class="timeline-logos">
+              <span class="history-logo" style="--logo-color: var(--dragonsOld);">
+                <img src="images/old/logo-dragons.png"></img>
+              </span>
+
+              <span class="history-logo" style="--logo-color: var(--Tiger);">
+                <img src="images/old/logo-three-shang-tigers.png"></img>
+              </span>
+
+            </div>
+
+            <h3>味全龍與三商虎相繼解散</h3>
+            <p>兩支早期球團退出中職，聯盟球隊數量縮減，職棒發展進入調整期。</p><span class="timeline-tag">球團解散</span>
+          </div>
+        </article>
+        <article class="timeline-item wow animate__animated animate__fadeInUp">
+          <div class="timeline-card">
+            <div class="timeline-year">1997</div>
+            <!-- <div class="timeline-logos"><span class="history-logo"><b style="--logo-color:#2686b9">鯨</b>和信鯨</span></div> -->
+            <div class="timeline-logos">
+              <span class="history-logo" style="--logo-color: var(--Whale);">
+                <img src="images/old/logo-whale_2.png"></img>
+              </span>
+            </div>
+
+            <h3>和信鯨加入，聯盟達七隊</h3>
+            <p>和信鯨加入後，聯盟曾達到七支球團，是中職早期球隊數量的重要高峰。</p><span class="timeline-tag">聯盟擴編</span>
+          </div>
+        </article>
+        <article class="timeline-item wow animate__animated animate__fadeInUp">
+          <div class="timeline-card">
+            <div class="timeline-year">1993</div>
+            <!-- <div class="timeline-logos"><span class="history-logo"><b style="--logo-color:#6d9b48">熊</b>俊國熊</span><span
+                class="history-logo"><b style="--logo-color:#bd313b">鷹</b>時報鷹</span></div> -->
+            <div class="timeline-logos">
+              <span class="history-logo" style="--logo-color: var(--JUNGO);">
+                <img src="images/old/105px-Jungo.gif"></img>
+
+              </span>
+              <span class="history-logo" style="--logo-color: var(--Eagle);">
+                <img src="images/old/105px-Eagle.jpg"></img>
+              </span>
+            </div>
+
+
+            <h3>俊國熊、時報鷹加入</h3>
+            <p>兩支新球團加入，聯盟擴編至六隊；俊國熊後續成為興農牛球團沿革的一部分。</p><span class="timeline-tag">第二波擴編</span>
+          </div>
+        </article>
+        <article class="timeline-item wow animate__animated animate__fadeInUp">
+          <div class="timeline-card">
+            <div class="timeline-year">1990</div>
+            <!-- <div class="timeline-logos"><span class="history-logo"><b style="--logo-color:#f2c230">象</b>兄弟象</span><span
+                class="history-logo"><b style="--logo-color:#c51f36">龍</b>味全龍</span><span class="history-logo"><b
+                  style="--logo-color:#d6a62b">虎</b>三商虎</span><span class="history-logo"><b
+                  style="--logo-color:#f1a51d">獅</b>統一獅</span></div> -->
+
+            <div class="timeline-logos">
+              <span class="history-logo" style="--logo-color: var(--brothersOld);">
+                <img src="images/old/logo-brothers.png"></img>
+              </span>
+              <span class="history-logo" style="--logo-color: var(--dragonsOld);">
+                <img src="images/old/logo-dragons.png"></img>
+              </span>
+              <span class="history-logo" style="--logo-color: var(--Tiger);">
+                <img src="images/old/logo-three-shang-tigers.png"></img>
+              </span>
+              <span class="history-logo" style="--logo-color: var(--lionsOld);">
+                <img src="images/old/logo-lions.png"></img>
+              </span>
+            </div>
+
+
+            <h3>中華職棒正式開打</h3>
+            <p>兄弟象、味全龍、三商虎、統一獅四支創始球團參與首季賽事，台灣職棒正式啟動。</p><span class="timeline-tag">職棒元年・四支創始球團</span>
+          </div>
+        </article>
+        <article class="timeline-item wow animate__animated animate__fadeInUp">
+          <div class="timeline-card">
+            <div class="timeline-year">1989</div>
+            <h3>中華職業棒球聯盟成立</h3>
+            <p>聯盟於 1989 年 10 月 23 日成立，為隔年正式開打奠定組織基礎。</p><span class="timeline-tag">聯盟成立</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 08｜六隊總覽與搜尋（保留原本搜尋欄的互動概念，改為球隊篩選） -->
+  <section class="section" id="s08">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">MEET THE SIX</span>
+        <h2 class="section-title">六支球隊，六種主場熱情。</h2>
+        <p class="section-lead">選擇一支球隊，從球團沿革、城市主場到品牌精神，認識 CPBL 現役六隊。</p>
+      </div>
+      <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+          <div class="input-group"><span class="input-group-text bg-white"><i
+                class="fa-solid fa-magnifying-glass"></i></span><input class="form-control" id="teamSearch"
+              type="search" placeholder="搜尋球隊名稱、城市或關鍵字…" aria-label="搜尋球隊"></div>
+          <div class="search-result" id="searchResult" aria-live="polite">目前顯示 6 支球隊</div>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0"><span class="badge rounded-pill text-bg-dark p-2">2026
+            網站內容版本</span> <span class="small text-secondary">球隊沿革以官方資料為準</span></div>
+      </div>
+      <div class="team-grid" id="teamGrid">
+        <article class="team-mini" data-search="中信兄弟 兄弟象 台中 洲際 黃色" style="--team-color:var(--brothers)">
+
+          <!-- <div class="team-emblem">B</div> -->
+          <div class="team-emblem">
+            <img src="images/CPBL_logo/Logo1_brothers.png">
+          </div>
+
+
+          <h3>中信兄弟</h3>
+          <p>台中｜兄弟象傳承・黃衫軍</p><a href="#s09">查看球隊故事 <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </article>
+
+        <!--  -->
+        <article class="team-mini" data-search="統一7-ELEVEn獅 統一獅 台南 亞太 綠色" style="--team-color:var(--lions)">
+
+
+          <!-- <div class="team-emblem">L</div> -->
+          <div class="team-emblem">
+            <img src="images/CPBL_logo/Logo1_lions.png">
+          </div>
+
+
+          <h3>統一 7-ELEVEn 獅</h3>
+          <p>台南｜創始球團・南台灣代表</p><a href="#s10">查看球隊故事 <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </article>
+
+
+        <!--  -->
+        <article class="team-mini" data-search="樂天桃猿 Lamigo La New 第一金剛 桃園" style="--team-color:var(--monkeys)">
+
+
+          <!-- <div class="team-emblem">M</div> -->
+          <div class="team-emblem">
+            <img src="images/CPBL_logo/Logo1_monkeys.png">
+          </div>
+
+
+          <h3>樂天桃猿</h3>
+          <p>桃園｜第一金剛至樂天桃猿</p><a href="#s11">查看球隊故事 <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </article>
+
+        <!--  -->
+        <article class="team-mini" data-search="富邦悍將 義大犀牛 興農牛 俊國熊 新北 新莊" style="--team-color:var(--guardians)">
+          <!-- <div class="team-emblem">G</div> -->
+          <div class="team-emblem">
+            <img src="images//CPBL_logo//Logo1_fubon.png">
+          </div>
+
+
+          <h3>富邦悍將</h3>
+          <p>新北｜俊國熊系譜・新莊主場</p><a href="#s12">查看球隊故事 <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </article>
+        <article class="team-mini" data-search="味全龍 天母 台北 創始球團 復出" style="--team-color:var(--dragons)">
+          <!-- <div class="team-emblem">D</div> -->
+          <div class="team-emblem">
+            <img src="images//CPBL_logo/Logo1_dragons.png">
+          </div>
+
+
+          <h3>味全龍</h3>
+          <p>台北｜創始球團・2019 重返</p><a href="#s13">查看球隊故事 <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </article>
+
+        <!--  -->
+        <article class="team-mini" data-search="台鋼雄鷹 高雄 澄清湖 第六隊" style="--team-color:var(--hawks)">
+          <!-- <div class="team-emblem">H</div> -->
+          <div class="team-emblem">
+            <img src="images//CPBL_logo/Logo1_hawks.png" alt="中信兄弟 Logo">
+          </div>
+
+
+          <h3>台鋼雄鷹</h3>
+          <p>高雄｜第六隊・南台灣新力量</p><a href="#s14">查看球隊故事 <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 09｜中信兄弟 -->
+  <section class="team-profile section" id="s09" style="--team-color:var(--brothers)">
+    <div class="team-profile-inner">
+      <!-- <div class="team-profile-visual" data-mark="B"
+        style="background-image:linear-gradient(0deg,#101820aa,#10182035),url(images/CPBL_logo/225px-Logo_brothers.png)">
+        <div class="visual-label">BROTHERS BASEBALL CLUB · TAICHUNG</div>
+      </div> -->
+      <div class="team-profile-visual" data-mark="B"
+        style="background-image:linear-gradient(0deg,var(--brothers),#10182035),url(images/CPBL_logo/225px-Logo_brothers.png)">
+        <div class="visual-label">BROTHERS BASEBALL CLUB · TAICHUNG</div>
+      </div>
+
+
+      <div class="team-profile-copy">
+        <!-- <span class="team-wordmark"
+          style="--team-color:var(--brothers)"><b>{letter}</b>{name}</span><span class="team-name-en">THE BROTHERS ·
+          YELLOW LEGACY</span> -->
+        <h3>中信兄弟</h3>
+        <p>中信兄弟承接兄弟象的球迷文化與球團傳承。兄弟象是 1990 年中職創始球團之一，2014 年由中國信託接手後更名為中信兄弟。球隊以台中為主要主場經營基地，黃色應援文化是球迷熟悉的代表特色。</p>
+        <div class="team-facts">
+          <div class="fact"><small>中職加盟／創始年</small><strong>1990 年（兄弟象）</strong></div>
+          <div class="fact"><small>現行隊名</small><strong>中信兄弟（2014）</strong></div>
+          <div class="fact"><small>主要主場</small><strong>臺中洲際棒球場</strong></div>
+          <div class="fact"><small>球團傳承</small><strong>兄弟象 → 中信兄弟</strong></div>
+        </div><a class="btn btn-sport" href="https://www.brothers.tw/" target="_blank" rel="noopener">球隊官方網站 <i
+            class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10｜統一獅 -->
+  <section class="team-profile section" id="s10" style="--team-color:var(--lions)">
+    <div class="team-profile-inner">
+      <!-- <div class="team-profile-visual" data-mark="L"
+        style="background-image:linear-gradient(0deg,#101820aa,#10182035),url(https://images.unsplash.com/photo-1566577739112-5180d4bf9390?auto=format&fit=crop&w=1300&q=85)">
+        <div class="visual-label">UNILIONS · TAINAN</div>
+      </div> -->
+      <div class="team-profile-visual" data-mark="L"
+        style="background-image:linear-gradient(0deg,var(--lions),#10182035),url(images/CPBL_logo/225px-Logo_lions.png)">
+        <div class="visual-label">UNILIONS · TAINAN</div>
+      </div>
+
+
+      <div class="team-profile-copy">
+        <!-- <span class="team-wordmark"
+          style="--team-color:var(--lions)"><b>{letter}</b>{name}</span><span class="team-name-en">THE LIONS · SOUTHERN
+          PRIDE</span> -->
+
+        <h3>統一 7-ELEVEn 獅</h3>
+        <p>統一獅為 1990 年中職創始球團之一，長期由統一企業經營。球團與台南有深厚連結，持續經營南部棒球市場，並以獅隊識別與主場活動凝聚球迷。</p>
+        <div class="team-facts">
+          <div class="fact"><small>中職加盟／創始年</small><strong>1990 年</strong></div>
+          <div class="fact"><small>主要經營企業</small><strong>統一企業</strong></div>
+          <div class="fact"><small>主場城市</small><strong>台南</strong></div>
+          <div class="fact"><small>球團傳承</small><strong>統一獅 → 統一 7-ELEVEn 獅</strong></div>
+        </div><a class="btn btn-sport" href="https://www.uni-lions.com.tw/" target="_blank" rel="noopener">球隊官方網站 <i
+            class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11｜樂天桃猿 -->
+  <section class="team-profile section" id="s11" style="--team-color:var(--monkeys)">
+    <div class="team-profile-inner">
+      <!-- <div class="team-profile-visual" data-mark="M"
+        style="background-image:linear-gradient(0deg,#101820aa,#10182035),url(https://images.unsplash.com/photo-1471295253337-3ceaaedca402?auto=format&fit=crop&w=1300&q=85)">
+        <div class="visual-label">RAKUTEN MONKEYS · TAOYUAN</div>
+      </div> -->
+      <div class="team-profile-visual" data-mark="L"
+        style="background-image:linear-gradient(0deg,var(--lions),#10182035),url(images/CPBL_logo/225px-Logo_lions.png)">
+        <div class="visual-label">UNILIONS · TAINAN</div>
+      </div>
+
+
+      <div class="team-profile-copy">
+        <!-- <span class="team-wordmark"
+          style="--team-color:var(--monkeys)"><b>{letter}</b>{name}</span><span class="team-name-en">THE MONKEYS · BRAND
+          EVOLUTION</span> -->
+
+        <h3>樂天桃猿</h3>
+        <p>樂天桃猿的球團沿革始於 2003 年第一金剛，2004 年由 La New 接手並更名為 La New 熊，2011 年改名 Lamigo 桃猿，2019
+          年由樂天接手後成為樂天桃猿。這條沿革呈現台灣職棒球團品牌與經營者轉換的歷程。</p>
+        <div class="team-facts">
+          <div class="fact"><small>球團沿革起點</small><strong>2003 年第一金剛</strong></div>
+          <div class="fact"><small>重要更名</small><strong>La New／Lamigo／樂天</strong></div>
+          <div class="fact"><small>主要主場</small><strong>樂天桃園棒球場</strong></div>
+          <div class="fact"><small>主要城市</small><strong>桃園</strong></div>
+        </div><a class="btn btn-sport" href="https://monkeys.rakuten.com.tw/" target="_blank" rel="noopener">球隊官方網站 <i
+            class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12｜富邦悍將 -->
+  <section class="team-profile section" id="s12" style="--team-color:var(--guardians)">
+    <div class="team-profile-inner">
+      <!-- <div class="team-profile-visual" data-mark="G"
+        style="background-image:linear-gradient(0deg,#101820aa,#10182035),url(https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1300&q=85)">
+        <div class="visual-label">FUBON GUARDIANS · NEW TAIPEI</div>
+      </div> -->
+      <div class="team-profile-visual" data-mark="L"
+        style="background-image:linear-gradient(0deg,var(--guardians),#10182035),url(images/CPBL_logo/225px-Logo_fubon.png)">
+        <div class="visual-label">UNILIONS · TAINAN</div>
+      </div>
+
+
+      <div class="team-profile-copy">
+        <!-- <span class="team-wordmark"
+          style="--team-color:var(--guardians)"><b>{letter}</b>{name}</span><span class="team-name-en">THE GUARDIANS ·
+          NORTHERN HOME</span> -->
+
+        <h3>富邦悍將</h3>
+        <p>富邦悍將的球團沿革可追溯至 1993 年加入中職的俊國熊，之後歷經興農牛、義大犀牛等隊名與經營轉換。富邦育樂於 2017 年接手義大犀牛並更名為富邦悍將，主要主場位於新北市新莊。</p>
+        <div class="team-facts">
+          <div class="fact"><small>球團沿革起點</small><strong>1993 年俊國熊</strong></div>
+          <div class="fact"><small>現行隊名</small><strong>富邦悍將（2017）</strong></div>
+          <div class="fact"><small>主要主場</small><strong>新莊棒球場</strong></div>
+          <div class="fact"><small>歷史脈絡</small><strong>俊國熊 → 興農牛 → 義大 → 富邦</strong></div>
+        </div><a class="btn btn-sport" href="https://www.fubonguardians.com/" target="_blank" rel="noopener">球隊官方網站 <i
+            class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 13｜味全龍 -->
+  <section class="team-profile section" id="s13" style="--team-color:var(--dragons)">
+    <div class="team-profile-inner">
+      <!-- <div class="team-profile-visual" data-mark="D"
+        style="background-image:linear-gradient(0deg,#101820aa,#10182035),url(https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=1300&q=85)">
+        <div class="visual-label">WEICHUAN DRAGONS · TAIPEI</div>
+      </div> -->
+      <div class="team-profile-visual" data-mark="L"
+        style="background-image:linear-gradient(0deg,var(--dragons),#10182035),url(images//CPBL_logo/225px-Logo_dragons.png)">
+        <div class="visual-label">UNILIONS · TAINAN</div>
+      </div>
+
+
+      <div class="team-profile-copy">
+        <!-- <span class="team-wordmark"
+          style="--team-color:var(--dragons)"><b>{letter}</b>{name}</span><span class="team-name-en">THE DRAGONS ·
+          RETURN OF A CLASSIC</span> -->
+
+        <h3>味全龍</h3>
+        <p>味全龍是中職 1990 年創始球團之一，曾於 1999 年解散。2019 年味全龍正式重新加盟中職，先投入二軍賽事，並於 2021 年重返一軍。球隊以台北為重要發展基地，延續經典龍隊的歷史記憶。</p>
+        <div class="team-facts">
+          <div class="fact"><small>創始加盟年</small><strong>1990 年</strong></div>
+          <div class="fact"><small>重新加盟</small><strong>2019 年</strong></div>
+          <div class="fact"><small>重返一軍</small><strong>2021 年</strong></div>
+          <div class="fact"><small>主要主場</small><strong>臺北市立天母棒球場</strong></div>
+        </div><a class="btn btn-sport" href="https://www.wdragons.com/" target="_blank" rel="noopener">球隊官方網站 <i
+            class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 14｜台鋼雄鷹 -->
+  <section class="team-profile section" id="s14" style="--team-color:var(--hawks)">
+    <div class="team-profile-inner">
+      <!-- <div class="team-profile-visual" data-mark="H"
+        style="background-image:linear-gradient(0deg,#101820aa,#10182035),url(https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1300&q=85)">
+        <div class="visual-label">TSG HAWKS · KAOHSIUNG</div>
+      </div> -->
+      <div class="team-profile-visual" data-mark="L"
+        style="background-image:linear-gradient(0deg,var(--hawks),#10182035),url(images//CPBL_logo/225px-Logo_hawks.png)">
+        <div class="visual-label">UNILIONS · TAINAN</div>
+      </div>
+
+
+      <div class="team-profile-copy">
+        <!-- <span class="team-wordmark"
+          style="--team-color:var(--hawks)"><b>{letter}</b>{name}</span><span class="team-name-en">THE HAWKS · NEW
+          SOUTHERN FORCE</span> -->
+
+        <h3>台鋼雄鷹</h3>
+        <p>台鋼雄鷹是中華職棒第六隊。台灣鋼鐵集團於 2022 年提出加盟意向並完成相關審查，球隊 2023 年參與二軍賽事，2024 年正式加入一軍。球團以高雄為基地，期望深耕南台灣棒球環境。</p>
+        <div class="team-facts">
+          <div class="fact"><small>加盟年份</small><strong>2022 年通過加盟</strong></div>
+          <div class="fact"><small>二軍首季</small><strong>2023 年</strong></div>
+          <div class="fact"><small>一軍首季</small><strong>2024 年</strong></div>
+          <div class="fact"><small>主要主場</small><strong>高雄澄清湖棒球場</strong></div>
+        </div><a class="btn btn-sport" href="https://www.tsghawks.com/" target="_blank" rel="noopener">球隊官方網站 <i
+            class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 15｜加盟歷史比較 -->
+  <section class="section section-dark" id="s15">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">FRANCHISE HISTORY</span>
+        <h2 class="section-title">球隊加盟與沿革，一表看懂。</h2>
+        <p class="section-lead">「創始加盟」與「球團沿革起點」並不完全相同；表格將現役隊伍的主要歷史脈絡分開標示，避免把品牌更名誤認為新球團加盟。</p>
+      </div>
+      <div class="table-responsive">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>現役球隊</th>
+              <th>沿革起點／加盟</th>
+              <th>重要歷史節點</th>
+              <th>主場城市</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>中信兄弟</td>
+              <td>1990 創始球團</td>
+              <td>兄弟象於 2014 年由中信接手並更名</td>
+              <td>台中</td>
+            </tr>
+            <tr>
+              <td>統一 7-ELEVEn 獅</td>
+              <td>1990 創始球團</td>
+              <td>長期由統一企業經營</td>
+              <td>台南</td>
+            </tr>
+            <tr>
+              <td>樂天桃猿</td>
+              <td>2003 第一金剛</td>
+              <td>2004 La New 熊；2011 Lamigo 桃猿；2019 樂天桃猿</td>
+              <td>桃園</td>
+            </tr>
+            <tr>
+              <td>富邦悍將</td>
+              <td>1993 俊國熊</td>
+              <td>興農牛、義大犀牛；2017 富邦悍將</td>
+              <td>新北</td>
+            </tr>
+            <tr>
+              <td>味全龍</td>
+              <td>1990 創始球團</td>
+              <td>1999 解散；2019 重新加盟；2021 重返一軍</td>
+              <td>台北</td>
+            </tr>
+            <tr>
+              <td>台鋼雄鷹</td>
+              <td>2022 通過加盟</td>
+              <td>2023 二軍首季；2024 一軍首季</td>
+              <td>高雄</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small mt-3 mb-0" style="color:#9eaaae">提醒：歷史上的球隊名稱、球團經營權與加盟年份代表不同概念。本表以官方球隊沿革與聯盟公告為主要整理依據。</p>
+    </div>
+  </section>
+
+
+  <!-- SECTION 15A｜2026 球季戰績與主場觀眾 -->
+  <section class="section stats-2026" id="s15-stats">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">2026 SEASON REVIEW</span>
+        <h2 class="section-title">2026 六隊戰績與主場人氣總覽。</h2>
+        <p class="section-lead">以 2026 年例行賽完整球季資料呈現年度勝敗與主場進場概況；戰績與觀眾人數分列，方便比較球場競爭力與球迷支持度。</p>
+      </div>
+      <h3 class="h5 fw-bold mb-3"><i class="fa-solid fa-ranking-star me-2" style="color:#e9b949"></i>全年例行賽戰績</h3>
+      <div class="table-wrap mb-5">
+        <table>
+          <thead>
+            <tr>
+              <th>排名</th>
+              <th>球隊</th>
+              <th>勝</th>
+              <th>敗</th>
+              <th>和</th>
+              <th>勝率</th>
+              <th>勝差</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><span class="team-dot" style="--dot:#c51f36"></span>味全龍</td>
+              <td>67</td>
+              <td>53</td>
+              <td>0</td>
+              <td>.558</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><span class="team-dot" style="--dot:#f1a51d"></span>統一 7-ELEVEn 獅</td>
+              <td>64</td>
+              <td>55</td>
+              <td>1</td>
+              <td>.538</td>
+              <td>2.5</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><span class="team-dot" style="--dot:#1764a5"></span>富邦悍將</td>
+              <td>59</td>
+              <td>61</td>
+              <td>0</td>
+              <td>.492</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><span class="team-dot" style="--dot:#d92735"></span>樂天桃猿</td>
+              <td>57</td>
+              <td>61</td>
+              <td>2</td>
+              <td>.483</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><span class="team-dot" style="--dot:#f2c230"></span>中信兄弟</td>
+              <td>56</td>
+              <td>62</td>
+              <td>2</td>
+              <td>.475</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><span class="team-dot" style="--dot:#1e8a72"></span>台鋼雄鷹</td>
+              <td>54</td>
+              <td>65</td>
+              <td>1</td>
+              <td>.454</td>
+              <td>12.5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="h5 fw-bold mb-3"><i class="fa-solid fa-people-group me-2" style="color:#e9b949"></i>各隊主場進場觀眾</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>球隊</th>
+              <th>主場總人數</th>
+              <th>主場場均</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="team-dot" style="--dot:#f2c230"></span>中信兄弟</td>
+              <td>702,928</td>
+              <td>11,715</td>
+            </tr>
+            <tr>
+              <td><span class="team-dot" style="--dot:#1764a5"></span>富邦悍將</td>
+              <td>684,434</td>
+              <td>11,407</td>
+            </tr>
+            <tr>
+              <td><span class="team-dot" style="--dot:#f1a51d"></span>統一 7-ELEVEn 獅</td>
+              <td>677,170</td>
+              <td>11,286</td>
+            </tr>
+            <tr>
+              <td><span class="team-dot" style="--dot:#d92735"></span>樂天桃猿</td>
+              <td>673,257</td>
+              <td>11,220</td>
+            </tr>
+            <tr>
+              <td><span class="team-dot" style="--dot:#c51f36"></span>味全龍</td>
+              <td>668,083</td>
+              <td>11,134</td>
+            </tr>
+            <tr>
+              <td><span class="team-dot" style="--dot:#1e8a72"></span>台鋼雄鷹</td>
+              <td>501,864</td>
+              <td>8,364</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="stats-note mt-3 mb-0">2026 例行賽聯盟總進場 3,907,736 人次，場均約 10,854 人。戰績資料：<a
+          href="https://hermesstats.com/cpbl/table/" target="_blank" rel="noopener"
+          class="link-light text-decoration-underline">荷米斯體育 2026 CPBL 全年戰績</a>；觀眾資料：<a
+          href="https://tw.sports.yahoo.com/news/%E4%B8%AD%E8%81%B7%E3%80%8B%E5%8F%B2%E4%B8%8A%E9%A6%96%E6%AC%A1%EF%BC%812026%E5%B9%B4%E7%B8%BD%E9%80%B2%E5%A0%B4%E4%BA%BA%E6%95%B8%E7%A0%B4390%E8%90%AC-5%E9%9A%8A%E5%A0%B4%E5%9D%87%E7%A0%B4%E8%90%AC-125839965.html"
+          target="_blank" rel="noopener" class="link-light text-decoration-underline">2026
+          球季觀眾人數統計</a>。本表呈現各隊主場票房／進場人次；客隊不另計一份「客場觀眾」，因單場觀眾人次依主辦場地統計。資料為年度回顧，非即時比分。</p>
+    </div>
+  </section>
+
+  <!-- SECTION 16｜經典時刻與棒球文化 -->
+  <section class="section" id="s16">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow">MORE THAN A GAME</span>
+        <h2 class="section-title">棒球，從來不只九局。</h2>
+        <p class="section-lead mx-auto">球團歷史之外，球場也是城市生活的一部分。這些共同記憶，讓每一季都值得期待。</p>
+      </div>
+      <div class="moment-grid">
+        <article class="moment wow animate__animated animate__fadeInUp"><span>THE FIRST PITCH</span>
+          <h3>職棒元年的第一球</h3>
+          <p class="mb-0 text-white-50">1990 年 3 月 17 日，台灣職業棒球正式開打，展開新的運動文化。</p>
+        </article>
+        <article class="moment wow animate__animated animate__fadeInUp"><span>HOME CROWD</span>
+          <h3>主場應援文化</h3>
+          <p class="mb-0 text-white-50">球迷、啦啦隊與球場音樂，構成獨特的觀賽體驗。</p>
+        </article>
+        <article class="moment wow animate__animated animate__fadeInUp"><span>RIVALRY</span>
+          <h3>城市對決</h3>
+          <p class="mb-0 text-white-50">不同球團的對戰，讓每座主場都充滿故事。</p>
+        </article>
+        <article class="moment wow animate__animated animate__fadeInUp"><span>NEXT GENERATION</span>
+          <h3>新世代接棒</h3>
+          <p class="mb-0 text-white-50">從基層棒球到職業舞台，讓熱愛持續傳承。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 17｜未來展望 -->
+  <section class="section section-deep" id="s17">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">NEXT INNING</span>
+        <h2 class="section-title">下一局，繼續向前。</h2>
+        <p class="section-lead">六隊格局帶來更多對戰組合，也讓聯盟有機會持續深化球迷服務、地方連結與人才培育。</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="vision-card wow animate__animated animate__fadeInUp"><i class="fa-solid fa-city"></i>
+            <h3>深化城市主場</h3>
+            <p>透過主場經營、地方合作與社區活動，讓球隊成為城市文化的一部分。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="vision-card wow animate__animated animate__fadeInUp" data-wow-delay=".12s"><i
+              class="fa-solid fa-chart-line"></i>
+            <h3>提升賽事體驗</h3>
+            <p>持續優化轉播、數據服務、球場設施與購票體驗，讓更多族群親近棒球。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="vision-card wow animate__animated animate__fadeInUp" data-wow-delay=".24s"><i
+              class="fa-solid fa-graduation-cap"></i>
+            <h3>培育下一代</h3>
+            <p>從基層棒球、青棒到職業舞台，建立更完整的人才培育與發展環境。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 18｜FAQ -->
+  <section class="section" id="s18">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <span class="eyebrow">QUICK QUESTIONS</span>
+          <h2 class="section-title">常見問題</h2>
+          <p class="section-lead">關於聯盟成立、球隊加盟與六隊現況的快速整理。</p>
+        </div>
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq1">中華職棒是哪一年成立、哪一年開打？</button></h3>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">聯盟於 1989 年 10 月 23 日成立，1990 年 3 月 17 日正式開打，1990 年因此稱為職棒元年。</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faq2">目前中華職棒有幾支球隊？</button></h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">目前為六支球團：中信兄弟、統一 7-ELEVEn 獅、樂天桃猿、富邦悍將、味全龍及台鋼雄鷹。</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faq3">味全龍是新成立的球隊嗎？</button></h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">不是。味全龍是 1990 年創始球團之一，1999 年解散，2019 年重新加盟，並於 2021 年重返一軍。</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faq4">台鋼雄鷹何時加入一軍？</button></h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">台鋼雄鷹於 2023 年參與二軍賽事，2024 年正式投入一軍賽事，成為中職第六隊。</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#faq5">這個網站的球隊戰績是即時資料嗎？</button></h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">不是。本頁是球隊與加盟歷史主題的形象網站，呈現的是沿革與基本資料，不提供即時戰績、當季平均觀眾或現任教練等可能變動的數據。最新資訊請以 CPBL
+                  與各球團官方網站為準。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 19｜聯絡表單（保留原始表單；送出僅前端模擬，不會傳送資料） -->
+  <section class="section" id="s19" style="background:#e8ebe5">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow">CONTACT & FEEDBACK</span>
+        <h2 class="section-title">一起分享你的棒球故事。</h2>
+        <p class="section-lead mx-auto">歡迎留下對網站內容的建議。此表單為課堂專案前端互動展示，不會將資料傳送至伺服器。</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="contact-card">
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6"><label class="form-label fw-bold" for="contactName">姓名</label><input
+                    class="form-control" id="contactName" required placeholder="請輸入姓名"></div>
+                <div class="col-md-6"><label class="form-label fw-bold" for="contactEmail">電子信箱</label><input
+                    class="form-control" id="contactEmail" type="email" required placeholder="name@example.com"></div>
+                <div class="col-12"><label class="form-label fw-bold" for="contactTopic">聯絡主題</label><select
+                    class="form-select" id="contactTopic" required>
+                    <option value="" selected disabled>請選擇主題</option>
+                    <option>網站內容建議</option>
+                    <option>球隊歷史資料勘誤</option>
+                    <option>合作與其他</option>
+                  </select></div>
+                <div class="col-12"><label class="form-label fw-bold" for="contactMessage">訊息內容</label><textarea
+                    class="form-control" id="contactMessage" rows="5" required placeholder="寫下你的想法……"></textarea></div>
+                <div class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-3"><button
+                    type="reset" class="btn btn-outline-secondary rounded-pill px-4">清除</button><button type="submit"
+                    class="btn btn-sport">送出訊息 <i class="fa-solid fa-paper-plane ms-2"></i></button></div>
+                <div class="col-12">
+                  <div class="toast-note" id="contactFeedback" aria-live="polite"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="contact-info">
+            <span class="eyebrow">OFFICIAL RESOURCES</span>
+            <h3 class="fw-black mt-3">查詢最新官方資訊</h3>
+            <p>賽程、戰績、票務與球隊公告可能隨球季變動，請透過官方平台確認。</p>
+            <div class="contact-line"><i class="fa-solid fa-globe"></i>
+              <div><strong>中華職棒官方網站</strong><br><a href="https://www.cpbl.com.tw/" target="_blank" rel="noopener"
+                  class="text-white-50">www.cpbl.com.tw</a></div>
+            </div>
+            <div class="contact-line"><i class="fa-solid fa-clock"></i>
+              <div><strong>資訊更新提醒</strong><br><span class="text-white-50">本頁為課堂前端展示作品，歷史資料以來源頁面為準。</span></div>
+            </div>
+            <div class="contact-line"><i class="fa-solid fa-baseball-bat-ball"></i>
+              <div><strong>Keep the game alive.</strong><br><span class="text-white-50">一球入魂，熱情不滅。</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 20｜資料來源與網站說明 -->
+  <section class="section section-dark" id="s20">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-5"><span class="eyebrow">FACT CHECK & SOURCES</span>
+          <h2 class="section-title">歷史資料，<br>以官方紀錄為本。</h2>
+          <p class="section-lead">本頁以聯盟沿革、聯盟新聞公告及球團官方介紹作為內容依據。為避免產生過期資訊，未填入未經核實的當季教練、球員、戰績與觀眾數。</p>
+        </div>
+        <div class="col-lg-7">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="vision-card">
+                <h3 class="h5">CPBL 球隊沿革</h3>
+                <p>歷年球隊名稱與年度球團紀錄。</p><a class="text-warning fw-bold" href="https://cpbl.com.tw/teamhistory"
+                  target="_blank" rel="noopener">查看官方沿革 <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="vision-card">
+                <h3 class="h5">味全龍重新加盟</h3>
+                <p>2019 年正式加盟中職成為第五隊。</p><a class="text-warning fw-bold"
+                  href="https://cpbl.com.tw/xmdoc/cont?sid=0L132506947326460907" target="_blank" rel="noopener">查看聯盟公告
+                  <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="vision-card">
+                <h3 class="h5">台鋼雄鷹球團介紹</h3>
+                <p>第六隊成立背景與球團願景。</p><a class="text-warning fw-bold" href="https://www.tsghawks.com/about-hawks/"
+                  target="_blank" rel="noopener">查看球團介紹 <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="vision-card">
+                <h3 class="h5">台鋼加盟新聞</h3>
+                <p>加盟意向與第六隊發展進程。</p><a class="text-warning fw-bold"
+                  href="https://cpbl.com.tw/xmdoc/cont?sid=0M061616259692454258" target="_blank" rel="noopener">查看聯盟新聞
+                  <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 21｜Footer 網站地圖 -->
+  <footer id="s21">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand"><i class="fa-solid fa-baseball me-2" style="color:var(--gold)"></i>CPBL / SIX TEAMS
+          </div>
+          <p class="mt-3">以球隊沿革為主軸，認識台灣職業棒球的歷史與現在。Play with passion. Cheer with pride.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold">探索網站</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a href="#s03">首頁</a></li>
+            <li><a href="#s04">聯盟介紹</a></li>
+            <li><a href="#s07">歷史時間軸</a></li>
+            <li><a href="#s08">六隊總覽</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="text-white fw-bold">球隊專區</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a href="#s09">中信兄弟</a></li>
+            <li><a href="#s10">統一 7-ELEVEn 獅</a></li>
+            <li><a href="#s11">樂天桃猿</a></li>
+            <li><a href="#s12">富邦悍將</a></li>
+            <li><a href="#s13">味全龍</a></li>
+            <li><a href="#s14">台鋼雄鷹</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="text-white fw-bold">官方平台</h6>
+          <ul class="list-unstyled lh-lg">
+            <li><a href="https://www.cpbl.com.tw/" target="_blank" rel="noopener">CPBL 官方網站</a></li>
+            <li><a href="#s15">加盟歷史比較</a></li>
+            <li><a href="#s19">聯絡與建議</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex justify-content-between flex-wrap gap-2 small"><span>© 2026 CPBL SIX TEAMS ·
+          學習用途之非官方形象網站</span><span>Designed for SPA / RWD / WOW.js / Animate.css</span></div>
+    </div>
+  </footer>
+
+  <!-- 註冊 Modal：保留原始註冊流程入口，前端示範驗證 -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 rounded-4 overflow-hidden">
+        <div class="modal-header text-white" style="background:#1d4939">
+          <h5 class="modal-title fw-bold" id="registerTitle"><i class="fa-solid fa-user-plus me-2"></i>會員註冊</h5><button
+            type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="關閉"></button>
+        </div>
+        <form id="registerForm">
+          <div class="modal-body p-4">
+            <div class="row g-4">
+              <div class="col-md-5">
+                <h6 class="fw-bold">會員條款與使用守則</h6>
+                <p class="small text-secondary">1. 請妥善保管帳號密碼。<br>2. 請提供正確的聯絡資訊。<br>3. 不得利用平台從事違法或侵害他人權益之行為。<br>4.
+                  不得發布侵權或不當內容。<br>5. 本表單僅作前端互動展示，不建立真實會員資料。</p>
+                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="agreeTerms"
+                    required><label class="form-check-label small" for="agreeTerms">我已閱讀並同意上述條款</label></div>
+              </div>
+              <div class="col-md-7">
+                <label class="form-label fw-bold" for="regUser">帳號</label><input class="form-control mb-3" id="regUser"
+                  required minlength="4" placeholder="至少 4 個字元">
+                <label class="form-label fw-bold" for="regPassword">密碼</label><input class="form-control mb-3"
+                  id="regPassword" type="password" required minlength="6" placeholder="至少 6 個字元">
+                <label class="form-label fw-bold" for="regPassword2">確認密碼</label><input class="form-control mb-3"
+                  id="regPassword2" type="password" required minlength="6">
+                <label class="form-label fw-bold" for="regEmail">Email</label><input class="form-control" id="regEmail"
+                  type="email" required placeholder="name@example.com">
+                <div class="small mt-2" id="registerFeedback" aria-live="polite"></div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer"><button type="button" class="btn btn-outline-secondary rounded-pill"
+              data-bs-dismiss="modal">取消</button><button type="submit" class="btn btn-sport">確認註冊</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 登入 Modal：保留原始登入功能入口，前端示範 -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4 overflow-hidden">
+        <div class="modal-header text-white" style="background:#8f3038">
+          <h5 class="modal-title fw-bold" id="loginTitle"><i class="fa-solid fa-right-to-bracket me-2"></i>會員登入</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="關閉"></button>
+        </div>
+        <form id="loginForm">
+          <div class="modal-body p-4">
+            <label class="form-label fw-bold" for="loginUser">帳號</label><input class="form-control mb-3" id="loginUser"
+              required>
+            <label class="form-label fw-bold" for="loginPassword">密碼</label><input class="form-control"
+              id="loginPassword" type="password" required>
+            <div class="small mt-3" id="loginFeedback" aria-live="polite">此登入為前端展示，不會驗證真實會員帳密。</div>
+          </div>
+          <div class="modal-footer"><button type="button" class="btn btn-outline-secondary rounded-pill"
+              data-bs-dismiss="modal">取消</button><button type="submit" class="btn btn-sport">確認登入</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="back-top" id="backTop" aria-label="回到頂端"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    // 首次載入流程：先顯示 loading，再以不可跳過的聲明視窗提示使用者
+    window.addEventListener("load", () => {
+      window.setTimeout(() => {
+        const loader = document.getElementById("pageLoader");
+        loader.classList.add("is-hidden");
+        const notice = new bootstrap.Modal(document.getElementById("disclaimerModal"), { backdrop: "static", keyboard: false });
+        notice.show();
+        document.getElementById("acceptDisclaimer").addEventListener("click", () => {
+          notice.hide(); document.body.classList.remove("intro-lock");
+        }, { once: true });
+        document.getElementById("disclaimerModal").addEventListener("hidden.bs.modal", () => document.body.classList.remove("intro-lock"), { once: true });
+      }, 650);
+    });
+
+    // WOW.js：捲動進入視窗時播放 Animate.css 動畫
+    if (typeof WOW !== "undefined") {
+      new WOW({ boxClass: "wow", animateClass: "animate__animated", offset: 70, mobile: true, live: true }).init();
+    }
+
+    // Counter-Up：使用 IntersectionObserver，元素進入視窗才計數一次
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = Number(el.dataset.target || 0);
+        const duration = 1300;
+        const start = performance.now();
+        const run = now => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 4);
+          el.textContent = Math.round(target * eased).toLocaleString("zh-TW");
+          if (progress < 1) requestAnimationFrame(run);
+        };
+        requestAnimationFrame(run);
+        observer.unobserve(el);
+      });
+    }, { threshold: .35 });
+    document.querySelectorAll(".counter").forEach(el => counterObserver.observe(el));
+
+    // 球隊搜尋：輸入名稱、城市或沿革關鍵字即可篩選六隊卡片
+    const teamSearch = document.getElementById("teamSearch");
+    const teamCards = [...document.querySelectorAll("#teamGrid .team-mini")];
+    const searchResult = document.getElementById("searchResult");
+    teamSearch.addEventListener("input", () => {
+      const keyword = teamSearch.value.trim().toLowerCase();
+      let count = 0;
+      teamCards.forEach(card => {
+        const matched = (card.dataset.search + card.innerText).toLowerCase().includes(keyword);
+        card.hidden = !matched;
+        if (matched) count++;
+      });
+      searchResult.textContent = keyword ? `搜尋「${teamSearch.value}」：找到 ${count} 支球隊` : `目前顯示 ${count} 支球隊`;
+    });
+
+    // 聯絡表單：前端模擬送出，明確告知沒有連接後端
+    document.getElementById("contactForm").addEventListener("submit", event => {
+      event.preventDefault();
+      if (!event.currentTarget.reportValidity()) return;
+      document.getElementById("contactFeedback").textContent = "已完成前端表單示範！目前尚未串接後端，資料不會被儲存或寄出。";
+      event.currentTarget.reset();
+    });
+    document.getElementById("contactForm").addEventListener("reset", () => {
+      document.getElementById("contactFeedback").textContent = "";
+    });
+
+    // 註冊表單：檢查密碼一致與同意條款，不保存個資
+    document.getElementById("registerForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const p1 = document.getElementById("regPassword").value;
+      const p2 = document.getElementById("regPassword2").value;
+      const feedback = document.getElementById("registerFeedback");
+      if (p1 !== p2) { feedback.textContent = "兩次輸入的密碼不一致，請重新確認。"; feedback.style.color = "#b42318"; return; }
+      if (!document.getElementById("agreeTerms").checked) { feedback.textContent = "請先同意會員條款。"; feedback.style.color = "#b42318"; return; }
+      feedback.textContent = "註冊表單驗證成功（前端示範）；尚未連接會員資料庫。";
+      feedback.style.color = "#26734d";
+    });
+
+    // 登入表單：不假裝驗證帳密，僅顯示前端互動說明
+    document.getElementById("loginForm").addEventListener("submit", event => {
+      event.preventDefault();
+      document.getElementById("loginFeedback").textContent = "已收到示範登入操作；此專案未連接會員系統，無法驗證帳號或登入。";
+    });
+
+    // 回到頂端按鈕
+    const backTop = document.getElementById("backTop");
+    window.addEventListener("scroll", () => backTop.classList.toggle("show", window.scrollY > 500), { passive: true });
+    backTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // 手機版點擊導覽連結後自動收合選單
+    document.querySelectorAll("#mainNav .nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        const nav = document.getElementById("mainNav");
+        if (nav.classList.contains("show")) bootstrap.Collapse.getOrCreateInstance(nav).hide();
+      });
+    });
+  </script>
+
+  <div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerTitle" aria-hidden="true"
+    data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content shadow-lg">
+        <div class="modal-header">
+          <h2 class="modal-title fs-4 fw-black" id="disclaimerTitle"><span class="notice-mark"><i
+                class="fa-solid fa-circle-info"></i></span>網站使用聲明</h2>
+        </div>
+        <div class="modal-body">
+          <p class="fw-bold text-dark">以球隊沿革為主軸，認識台灣職業棒球的歷史與現在。</p>
+          <ul class="mb-3">
+            <li>本網站為個人整理與學習展示，<strong>非中華職棒及各隊之官方頁面</strong>。</li>
+            <li>網站內容僅供參考，資訊可能隨官方公告更新。</li>
+            <li>內容主要參考聯盟沿革、聯盟新聞公告及球團官方介紹。</li>
+            <li>網站所使用之球隊名稱、商標、標誌、照片及其他圖像，其權利仍屬原權利人或授權方所有；僅作介紹、評論與非商業學習展示，若有侵權疑慮請聯繫移除。</li>
+            <li>頁面內部分圖片為情境示意素材，並非特定球隊或賽事官方照片。</li>
+          </ul>
+          <p class="small text-secondary mb-0">點選「我已了解」即可進入網站瀏覽。</p>
+        </div>
+        <div class="modal-footer border-0 px-4 pb-4"><button type="button" class="btn btn-sport px-4"
+            id="acceptDisclaimer">我已了解，進入網站</button></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
